@@ -34,3 +34,4 @@ RUN apt-get update && \
            /tmp/* \
            /var/tmp/*
 
+CMD ["/bin/echo", "See https://github.com/lsst-sqre/lsst-texlive for usage."]

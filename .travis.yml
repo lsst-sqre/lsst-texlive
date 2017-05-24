@@ -1,0 +1,18 @@
+sudo: required
+language: c
+services:
+  - docker
+
+script:
+  - "docker build -t ${IMAGE_NAME}:build ."
+
+after_success:
+  - "./travis-deploy.sh"
+
+env:
+  global:
+    # DOCKER_USERNAME
+    - secure: "0snOc6EgeOP2pDDNe1HiRn3kXFWVA2DsrxU3zfpoDrYQOwwj0E0obfXY7eHJEbphTTelDx7rle0hI8+47a7po6MyG3lg2iIWsyvX9SLXUh7h29lN3aUhvSBSrHCuy7MdjaxkeSU1Y8020Zab8xWF3KBVdU3jTTgMOMHiGfc5AuFRu3WzH36bqGGCwOoxoYK25DVag0dXLXspXyOXLMc6Iv62SZgNcmIpoj3eGCm4n00AK+QxakdnicAUuEJ/V9DSHSbSV9bMuS8OMehsMmHx7MXITCQQj0KhwUAcQQpfZmSprjFNvBbvJXoGlH5QViVxnsLdx4aFH6aNM9URLfLRPE3V+RAr928FdbdIXW/dl+kaOXVnOcQGT9vPAkDUZgSp8LZgnt+rcZ9quWzfPsxm26Xp0c8iIGUduENaPdAGyxUIsoDHBEdkgW2xAccaUqFC5d1xglwreqqyQRnXQcJ21B/sgxO5Uzt4z4v5QZWJ83FSU4aO6Pap1WaNVZdboizHDD81HTVXc0JMy4PYIkVBM/CXUUWwggc+w/Gm08OZhxXfsouTXMB7VrIJWdYdidIV3i7f4Yz+pnnWwyOUJuVrzuBixINlfR/dQo/JTM88etnKs8iijAs/gt2VKCMPcYOxga83LRv7KQIGTxtbslizRwSeEIqkiX7UB22qv/Ve/LU="
+    # DOCKER_PASSWORD
+    - secure: "i8zlJkdXiNYpDiwAg3pE1nBxYI/zzw/VxPUvlrI5QR0E+rj+3+S52KAIHq2aG9YPCTEpCOBvruAbXL6NX8pjxqx9/qKmh/tnK3p5SAP8JF1E54TY6DM+DqY9U3eN7IY0aljG1rHYDqpYyD3RR9T3vg1n9uBXHe9AVSGmW6gJ9wdcHrRtBfFlNBrGJbzZoQVTQYTlP4BN3vs/kBm4qm/d3xW6h/kKi1PZORmAs/d+Oj2ashNW9BpCLwcSoxFjpowhpamwID2BdpqixrsgRFzjh1knySeyAvsa6K1Qt6yI+ppN/qnzLUbt3KrC0n6+P8exp4ixJleMt9UKI57u+oGwqzMlumTaRkcIOZrGjWzwlIhMX4IIS8nlTVHU5cMP2ZM8LoQV1NrzBZA6pzxP881JQUmSH/O4acBPfEw102zQbPUI+wjs6Sil+fGSYf/h1UA5mv2pXWvwiSvl/O8lKrf0A0x+P7mlQAz8KeLHbJjherthpZ75mzkxPQ4MvFlqghhgZnPwNjqYk/gKtCzH1VzTJvcCqXAJY6FZCi6bsMyUAP8suT+V/y7TlDNOcQenx9h0vNP21nKl89Um4Sf4xHD1Zh0PjhNIfvnJgaYVoNgSacYyjxF/nNIwR0+tevDAD6J1L4Eb45km9U+el8mhmONtZDkvcyaONlWJhsNF1c3d0bA="
+    - IMAGE_NAME="lsstsqre/lsst-texlive"
