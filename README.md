@@ -2,7 +2,7 @@
 
 **texlive Docker image for LSST documentation deployment.**
 
-Use ``lsst-texlive`` in a CI environment to speed up build times, or as a replacement for a local lexlive installation on your own computer.
+Use ``lsst-texlive`` in a CI environment to speed up build times, or as a replacement for a local texlive installation on your own computer.
 
 **Links:**
 
@@ -30,6 +30,28 @@ Notes:
 The ``lsst/lsst-texlive`` image is currently based on Ubuntu trusty (14.04).
 It includes ``git``, ``make`` and a comprehensive texlive installation.
 See the Dockerfile for details.
+
+## Developer guide
+
+You can hack on this repo by cloning it and build it using the Makefile:
+
+```bash
+git clone https://github.com/lsst-sqre/lsst-texlive
+cd lsst-texlive
+make all
+docker run --rm lsstsqre/lsst-texlive:latest
+```
+
+This repo uses Travis CI to build and push tagged image to Docker Hub.
+The normal development workflow is:
+
+1. Create a branch.
+2. Commit changes and push to a new branch on GitHub (`git push -u`).
+3. Test your image using the tagged version corresponding to the branch or Travis build number.
+4. To release, make a tag: `git tag -s N.N.N -m "vN.N.N"` and `git push --tags`
+5. Merge to master: `git checkout master && git merge --no-ff <branch>`.
+
+The `latest` tag corresponds to the head of the `master` branch.
 
 ## License
 
