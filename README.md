@@ -9,8 +9,6 @@ Use ``lsst-texlive`` in a CI environment to speed up build times, or as a replac
 - GitHub repository: https://github.com/lsst-sqre/lsst-texlive
 - Docker Hub: https://hub.docker.com/r/lsstsqre/lsst-texlive/
 
-
-
 ## Example usage
 
 This example demonstrates how how to build [DMTN-044](https://github.com/lsst-dm/dmtn-044) (a LaTeX-formatted technical note) with `lsst-texlive`.
@@ -34,3 +32,7 @@ It includes ``git``, ``make`` and a comprehensive texlive installation.
 See the Dockerfile for details.
 
 ## License
+
+Copyright 2017 Association of Universities for Research in Astronomy, Inc..
+
+lsst-texlive is MIT-licensed open source. See LICENSE file.
