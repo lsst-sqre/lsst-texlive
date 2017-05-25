@@ -29,6 +29,19 @@ RUN apt-get update && \
         texlive-xetex \
         texlive-generic-recommended \
         texlive-full && \
+    # Purge documentation
+    apt-get purge -f -y \
+        make-doc \
+        texlive-fonts-extra-doc \
+        texlive-fonts-recommended-doc \
+        texlive-humanities-doc \
+        texlive-latex-base-doc \
+        texlive-latex-extra-doc \
+        texlive-latex-recommended-doc \
+        texlive-metapost-doc \
+        texlive-pictures-doc \
+        texlive-pstricks-doc \
+        texlive-science-doc && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* \
            /tmp/* \
