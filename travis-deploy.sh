@@ -25,4 +25,4 @@ docker push ${IMAGE_NAME}:${TAG}
 
 # Tag and push based on the Travis build number for forensics
 docker tag ${IMAGE_NAME}:build ${IMAGE_NAME}:travis-${TRAVIS_BUILD_NUMBER}
-docker push ${IMAGE_NAME}:${IMAGE_NAME}:travis-${TRAVIS_BUILD_NUMBER}
+docker push ${IMAGE_NAME}:travis-${TRAVIS_BUILD_NUMBER}
