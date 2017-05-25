@@ -2,6 +2,8 @@
 
 **texlive Docker image for LSST documentation deployment.**
 
+[![Travis branch](https://img.shields.io/travis/lsst-sqre/lsst-texlive/master.svg)](https://travis-ci.org/lsst-sqre/lsst-texlive)
+
 Use ``lsst-texlive`` in a CI environment to speed up build times, or as a replacement for a local texlive installation on your own computer.
 
 **Links:**
