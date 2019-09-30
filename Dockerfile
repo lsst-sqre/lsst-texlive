@@ -24,7 +24,6 @@ RUN apt-get update && \
         texlive-latex-recommended \
         latexmk \
         poppler-utils \
-        latex-xcolor \
         lmodern \
         texlive-xetex \
         texlive-generic-recommended \
