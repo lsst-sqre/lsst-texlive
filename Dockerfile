@@ -2,7 +2,7 @@
 #
 # https://github.com/lsst-sqre/lsst-texlive
 
-FROM ubuntu:trusty
+FROM ubuntu:bionic
 MAINTAINER LSST SQuaRE <sqre-admin@lists.lsst.org>
 
 ENV LANG C.UTF-8
