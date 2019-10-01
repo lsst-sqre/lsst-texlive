@@ -29,7 +29,6 @@ RUN apt-get update && \
         texlive-xetex \
         texlive-generic-recommended \
         texlive-full && \
-    # Purge documentation
     apt-get purge -f -y \
         make-doc \
         texlive-fonts-extra-doc \
