@@ -6,6 +6,7 @@ FROM ubuntu:bionic
 MAINTAINER LSST SQuaRE <sqre-admin@lists.lsst.org>
 
 ENV LANG C.UTF-8
+ENV DEBIAN_FRONTEND noninteractive 
 
 # Matches installation in early Travis PDF installations
 # h/t https://github.com/thomasWeise/docker-texlive/blob/master/image/Dockerfile
