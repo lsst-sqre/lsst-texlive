@@ -2,10 +2,11 @@
 #
 # https://github.com/lsst-sqre/lsst-texlive
 
-FROM ubuntu:trusty
+FROM ubuntu:bionic
 MAINTAINER LSST SQuaRE <sqre-admin@lists.lsst.org>
 
 ENV LANG C.UTF-8
+ENV DEBIAN_FRONTEND noninteractive 
 
 # Matches installation in early Travis PDF installations
 # h/t https://github.com/thomasWeise/docker-texlive/blob/master/image/Dockerfile
@@ -24,12 +25,10 @@ RUN apt-get update && \
         texlive-latex-recommended \
         latexmk \
         poppler-utils \
-        latex-xcolor \
         lmodern \
         texlive-xetex \
         texlive-generic-recommended \
         texlive-full && \
-    # Purge documentation
     apt-get purge -f -y \
         make-doc \
         texlive-fonts-extra-doc \
