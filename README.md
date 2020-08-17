@@ -1,3 +1,5 @@
+**This project is archived and replaced by https://github.com/lsst/lsst-texmf.**
+
 # lsst-texlive
 
 **texlive Docker image for LSST documentation deployment.**
